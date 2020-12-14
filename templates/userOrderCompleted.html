@@ -1,0 +1,34 @@
+<h1>Congrats</h1>
+<h2>You have successfully placed your order</h2>
+<hr />
+
+<div class="formWrapper">
+  <form action="/api/cart" method="POST" id="orderCompleted">
+    <div class="formError"></div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Your OrderID:</div>
+      <input class="disabled orderId" type="text" name="orderId" disabled />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Receipt was mailed to your email:</div>
+      <input class="disabled email" type="email" name="email" disabled />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Order Date:</div>
+      <input class="disabled orderDate" type="text" name="orderDate" disabled />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Cart Total:</div>
+      <input class="disabled total" type="number" name="total" disabled />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Cart Items:</div>
+      <textarea class="disabled items" name="items" disabled rows="10" cols="100"
+        style="width:100%;border-width:1px;border-radius:2px;"></textarea>
+    </div>
+
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Continue</button>
+    </div>
+  </form>
+</div>

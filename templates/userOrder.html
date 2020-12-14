@@ -1,0 +1,37 @@
+<h1>Complete your Order</h1>
+<h2>Please enter your payment options and press checkout to complete order</h2>
+<hr />
+
+<div class="formWrapper">
+  <form action="/api/order" method="POST" id="orderCheckout">
+    <div class="formError"></div>
+    <input class="hiddenEmailInput" type="hidden" name="email" />
+    <div class="inputWrapper">
+      <div class="inputLabel">Email</div>
+      <input class="disabled displayEmailInput" type="email" name="displayEmail" disabled />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Total SUM (USD):</div>
+      <input class="disabled total" type="number" name="total" disabled />
+    </div>
+
+    <div class="inputWrapper">
+      <div class="inputLabel">Credit Card Number</div>
+      <input type="text" name="cardNumber" placeholder="4242424242424242" />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Card Type</div>
+      <!--Any from: https://stripe.com/docs/testing#cards -->
+      <select name="paymentToken">
+        <option value="tok_visa">Visa</option>
+        <option value="tok_visa_debit">Visa (debit)</option>
+        <option value="tok_mastercard">Mastercard</option>
+        <option value="tok_mastercard_debit">Mastercard (debit)</option>
+        <option value="tok_mastercard_prepaid">Mastercard (prepaid)</option>
+      </select>
+    </div>
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta green">Checkout</button>
+    </div>
+  </form>
+</div>
